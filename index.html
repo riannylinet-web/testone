@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AYORA & CORE LAPTOP SELLS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+    <h1 class="logo">AYORA</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#products">Products</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+    <h2>Smart Tech. Smart Prices.</h2>
+    <p>Click any product to order instantly via WhatsApp</p>
+</section>
+
+<!-- Products -->
+<section class="products" id="products">
+    <h2>Our Products</h2>
+
+    <div class="product-grid">
+
+        <div class="product-card"
+             data-name="WeTech Pro X"
+             data-price="KSH 26,000">
+            <img src="laptop 2.jpeg" alt="WeTech Pro X">
+            <h3>WeTech Pro X</h3>
+            <p>HP Elitebook i7 • 16GB RAM • 256GB SSD</p>
+            <span>KSH 26,000</span>
+        </div>
+
+        <div class="product-card"
+             data-name="WeTech Air"
+             data-price="KSH 24,000">
+            <img src="laptop 1.jpeg" alt="WeTech Air">
+            <h3>WeTech Air</h3>
+            <p>Intel i5 • 8GB RAM • 256GB SSD</p>
+            <span>KSH 24,000</span>
+        </div>
+
+        <div class="product-card"
+             data-name="Laptop Charger"
+             data-price="KSH 1,800">
+            <img src="charger.jpg" alt="Laptop Charger">
+            <h3>Laptop Charger</h3>
+            <p>Universal laptop charger</p>
+            <span>KSH 1,800</span>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2025 AYORA & CORE LAPTOP SELLS
+</footer>
+
+<!-- WhatsApp Redirect Script -->
+<script>
+    const phoneNumber = "254117739765"; // YOUR WhatsApp number
+
+    document.querySelectorAll(".product-card").forEach(card => {
+        card.addEventListener("click", () => {
+            const name = card.dataset.name;
+            const price = card.dataset.price;
+
+            const message =
+`Hello, I am interested in this product:
+
+Product: ${name}
+Price: ${price}
+
+Please confirm availability.`;
+
+            const whatsappURL =
+                `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            window.open(whatsappURL, "_blank");
+        });
+    });
+</script>
+
+</body>
+</html>
