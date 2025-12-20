@@ -224,3 +224,517 @@ footer {
     font-size: 28px;
   }
 }
+/* Shadow Buttons */
+.btn-shadow {
+  display: inline-block;
+  margin: 15px;
+  padding: 14px 30px;
+  background: #0066ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-shadow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 102, 255, 0.4);
+}
+
+/* WhatsApp Button */
+.btn-shadow.whatsapp {
+  background: #25d366;
+}
+
+.btn-shadow.whatsapp:hover {
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+}
+
+/* About & Contact spacing */
+.about-actions,
+.contact-actions {
+  margin-top: 30px;
+}
+
+/* About & Contact Sections */
+.about, .contact {
+  padding: 80px 40px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.about h2, .contact h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+/* About Page Repair Image */
+.repair-image {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.repair-image img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+
+/* About Hero */
+.about-hero {
+  background: linear-gradient(135deg, #0066ff, #00e5ff);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.about-hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 18px;
+}
+
+/* About Sections */
+.about-section {
+  padding: 60px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #0066ff;
+}
+
+.about-section p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Light background for alternating sections */
+.bg-light {
+  background: #f4f6f8;
+  border-radius: 12px;
+  margin: 40px 0;
+  padding: 60px 40px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Repair Section Layout */
+.repair-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.repair-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.repair-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.repair-list {
+  flex: 2 1 400px;
+}
+
+.repair-list ul {
+  list-style: disc inside;
+  line-height: 1.8;
+}
+
+/* About Buttons */
+.about-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.about-actions .btn-shadow {
+  margin: 10px;
+}
+
+/* Mobile Responsiveness */
+@media(max-width:768px){
+  .repair-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .repair-list ul {
+    text-align: left;
+  }
+}
+
+
+
+
+/* Repair Section Hover Animation */
+.repair-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.repair-image img:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* Repair List with Icons */
+.repair-list ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.8;
+}
+
+.repair-list ul li {
+  font-size: 16px;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 30px;
+  transition: transform 0.3s ease;
+}
+
+.repair-list ul li i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #0066ff;
+  font-size: 18px;
+}
+
+/* Hover effect on list items */
+.repair-list ul li:hover {
+  transform: translateX(5px);
+  color: #0066ff;
+}
+
+
+
+/* Repair Grid Layout */
+.repair-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* Repair Card */
+.repair-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.repair-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+/* Icon Box */
+.icon-box {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0066ff, #00e5ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0,102,255,0.4);
+}
+
+.icon-box i {
+  color: white;
+  font-size: 28px;
+}
+
+/* Repair Text */
+.repair-card h4 {
+  margin: 15px 0 8px;
+  font-size: 18px;
+  color: #111;
+}
+
+.repair-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .repair-card {
+    padding: 25px 15px;
+  }
+}
+
+
+/* Repair Form Section */
+.repair-form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 40px auto 0;
+  align-items: center;
+}
+
+.repair-info h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #0066ff;
+}
+
+.repair-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.repair-points {
+  list-style: none;
+  padding: 0;
+}
+
+.repair-points li {
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Repair Form */
+.repair-form textarea {
+  width: 100%;
+  height: 160px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  font-size: 15px;
+  resize: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.repair-form textarea:focus {
+  outline: none;
+  border-color: #0066ff;
+  box-shadow: 0 0 10px rgba(0,102,255,0.3);
+}
+
+.repair-form button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #25d366;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(37,211,102,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.repair-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(37,211,102,0.6);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .repair-form-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+
+
+/* Repair Form Inputs */
+.repair-form select,
+.repair-form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  font-size: 15px;
+  margin-bottom: 12px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.repair-form select:focus,
+.repair-form textarea:focus {
+  outline: none;
+  border-color: #0066ff;
+  box-shadow: 0 0 10px rgba(0,102,255,0.3);
+}
+
+/* Notes */
+.whatsapp-hint {
+  font-size: 14px;
+  color: #25d366;
+  margin-bottom: 5px;
+}
+
+.pricing-note {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* Button */
+.repair-form button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #25d366;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(37,211,102,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.repair-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(37,211,102,0.6);
+}
+
+/* Success Message */
+#successMsg {
+  display: none;
+  margin-top: 10px;
+  color: #0066ff;
+  font-weight: bold;
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.call-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0066ff;
+  color: white;
+  padding: 14px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  z-index: 999;
+}
+
+.call-float:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+
+.testimonials {
+  padding: 80px 40px;
+  background: #f9fafc;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.4s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+}
+
+.testimonial-card h4 {
+  margin-top: 15px;
+  color: #0066ff;
+}
+
+
+
+
+.map-container {
+  margin: 40px auto;
+  max-width: 900px;
+  height: 350px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+@media (max-width: 600px) {
+  h2 { font-size: 26px; }
+  p { font-size: 15px; }
+
+  .product-card,
+  .testimonial-card {
+    padding: 18px;
+  }
+}
