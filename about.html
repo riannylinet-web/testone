@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="AYORA TECH – Affordable laptops, accessories, and professional laptop repair services in Nyeri, Kenya. Order via WhatsApp.">
+<meta name="keywords" content="laptops Nyeri, laptop repair Nyeri, HP Dell Lenovo laptops Kenya, AYORA TECH">
+<meta name="author" content="AYORA TECH">
+<title>AYORA TECH | Laptops & Repairs in Nyeri</title>
+
+  <title>About Us - AYORA TECH</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar">
+  <h1 class="logo">AYORA</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html" class="active">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+
+</header>
+
+<!-- Hero Section -->
+<section class="about-hero">
+  <h1>About AYORA TECH</h1>
+  <p>Trusted laptops, accessories, and professional repair services in Nyeri, Kenya</p>
+</section>
+
+<!-- Who We Are -->
+<section class="about-section">
+  <h2>Who We Are</h2>
+  <p>
+    AYORA TECH is a trusted laptop and accessories shop based in Nyeri, Kenya. 
+    We provide high-quality laptops, computer accessories, and reliable tech solutions 
+    at competitive prices. Our goal is to make technology accessible to everyone.
+  </p>
+</section>
+
+<!-- Mission -->
+<section class="about-section bg-light">
+  <h2>Our Mission</h2>
+  <p>
+    Our mission is to empower students, professionals, businesses, and gamers 
+    by offering reliable technology solutions. With fast ordering via WhatsApp and 
+    excellent customer service, we ensure every client is satisfied.
+  </p>
+</section>
+
+<!-- Repair Services -->
+<section class="about-section">
+  <h2>Laptop Repair Services</h2>
+
+  <div class="repair-form-container">
+    <div class="repair-info">
+      <h3>Need Laptop Repair?</h3>
+      <p>
+        Describe your laptop problem below and send it directly to AYORA TECH
+        via WhatsApp. We handle software issues, password recovery, virus
+        removal, and hardware repairs.
+      </p>
+
+      <ul class="repair-points">
+        <li>✔ Software installation & updates</li>
+        <li>✔ Password recovery</li>
+        <li>✔ Virus removal</li>
+        <li>✔ Hardware troubleshooting</li>
+      </ul>
+    </div>
+
+    <div class="repair-form">
+
+  <!-- Laptop Brand -->
+  <select id="deviceBrand" required>
+    <option value="">Select Laptop Brand</option>
+    <option value="HP">HP</option>
+    <option value="Dell">Dell</option>
+    <option value="Lenovo">Lenovo</option>
+    <option value="Acer">Acer</option>
+    <option value="Asus">Asus</option>
+    <option value="Other">Other</option>
+  </select>
+
+  <!-- Problem Description -->
+  <textarea id="repairMessage"
+    placeholder="Describe your laptop problem here (e.g. not powering on, password forgotten, software installation)..."
+    required></textarea>
+
+  <!-- WhatsApp Hint -->
+  <p class="whatsapp-hint">
+    📸 You can attach photos of your laptop on WhatsApp after sending.
+  </p>
+
+  <!-- Pricing Notice -->
+  <p class="pricing-note">
+    💰 Repair charges depend on the problem. Diagnosis is affordable.
+  </p>
+
+  <!-- Send Button -->
+  <button onclick="sendRepairMessage()">Send to WhatsApp</button>
+
+  <!-- Success Message -->
+  <p id="successMsg">✔ Redirecting to WhatsApp…</p>
+
+</div>
+
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- Call to Action -->
+<section class="about-section bg-light">
+  <div class="about-actions">
+    <a href="products.html" class="btn-shadow">View Products</a>
+    <a href="contact.html" class="btn-shadow">Contact Us</a>
+  </div>
+</section>
+
+
+<script>
+function sendRepairMessage() {
+  const brand = document.getElementById("deviceBrand").value;
+  const message = document.getElementById("repairMessage").value.trim();
+  const phoneNumber = "254112318201"; // Your WhatsApp number
+  const successMsg = document.getElementById("successMsg");
+
+  if (!brand || !message) {
+    alert("Please select your laptop brand and describe the problem.");
+    return;
+  }
+
+  const fullMessage =
+`Hello AYORA TECH,
+
+Laptop Brand: ${brand}
+
+Problem Description:
+${message}
+
+Please assist.`;
+
+  successMsg.style.display = "block";
+
+  setTimeout(() => {
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullMessage)}`;
+    window.open(whatsappURL, "_blank");
+    successMsg.style.display = "none";
+  }, 800);
+}
+</script>
+
+<a href="tel:0112318201" class="call-float">
+  📞 Call Us
+</a>
+
+<footer>
+  © 2025 AYORA & CORE LAPTOP SELLS
+</footer>
+
+
+
+
+
+</body>
+</html>
